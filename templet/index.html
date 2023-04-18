@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Network Speed Test</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body>
+  <div class="flex justify-center">
+    <div class="grid grid-cols-1 gap-4">
+      <h1 class="text-4xl font-bold my-4 flex justify-center">
+        Network Speed Test
+      </h1>
+      <div class="p-8 m-4 shadow-xl">
+        <table>
+          {% for key, value in results.items() %}
+          <tr>
+            <td class="text-lg">{{ key }}:</td>
+            <td class="text-lg text-gray-800">{{ value }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+   </div>
+   <div class="text-md p-4 my-4 flex justify-center">
+        Refresh the page for Speed Test
+      </div>
+  </body>
+</html>
+
